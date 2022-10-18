@@ -28,3 +28,26 @@ def split(lst):
     mid = len(lst) // 2
     left = lst[:mid]
     right = lst[mid:]
+
+    return left, right
+
+
+def merge(left, right):
+    """
+    Merges two lists (arrays), sorting them in the process
+    :param left:
+    :param right:
+    :return: return a new merged list
+    """
+
+    l = []
+    i = 0
+    j = 0
+
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            l.append(left[i])
+            i += 1
+        else:
+            l.append(right[j])
+            j +=1
